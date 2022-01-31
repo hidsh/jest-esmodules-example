@@ -22,7 +22,7 @@ $ npm install --save-dev @babel/plugin-transform-modules-commonjs
 `-- package.json
 ```
 
-# 結果
+# テスト実施
 ```
 $ npx jest
  PASS  __tests__/mylib.test.js
@@ -32,5 +32,24 @@ Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
 Time:        0.736 s, estimated 1 s
+Ran all test suites.
+```
+
+# カバレッジ表示
+```
+$ npx jest --coverage
+ PASS  __tests__/mylib.test.js
+  ✓ add 1 + 2 (3 ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |      100 |     100 |     100 |
+ mylib.js |     100 |      100 |     100 |     100 |
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.873 s, estimated 1 s
 Ran all test suites.
 ```
